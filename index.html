@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lesson Hider Directive</title>
+</head>
+<body>
+<div ng-app='directivePractice'>
+  <div ng-controller='lessonCtrl'>
+
+
+    <div>
+      {{ test }}
+    </div>
+      <!-- The short way -->
+      <lesson-hider ng-repeat="lesson in lessons" my-test='Hello there!' lesson='lesson' day-alert='announceDay(lesson,day)'></lesson-hider>
+
+      <!-- The long way -->
+      <!-- <lesson-hider my-test='Hello there!' lesson='lessons[0]'></lesson-hider>
+      <lesson-hider my-test='Hello there!' lesson='lessons[1]'></lesson-hider>
+      <lesson-hider my-test='Hello there!' lesson='lesson[2]'></lesson-hider>
+      <lesson-hider my-test='Hello there!' lesson='lessons[3]'></lesson-hider> -->
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+<script src="app.js" charset="utf-8"></script>
+<script src="lessonCtrl.js" charset="utf-8"></script>
+<script src="lessonHider.js" charset="utf-8"></script>
+<script src="lessonService.js" charset="utf-8"></script>
+
+</body>
+</html>
